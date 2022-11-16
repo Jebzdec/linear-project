@@ -127,20 +127,24 @@ const App = () => {
 
   return isLoading == false ? (
     <div className="App">
-      <div style={{ width: "30vw" }}></div>
+      {/* <div style={{ width: "30vw" }}></div> */}
       <div className="content">
         <div>
-          <h2>Enter url track:</h2>
+          <h2>Enter url track</h2>
         </div>
         <input
-          style={{ width: "50vh", height: "20px" }}
+          style={{
+            width: "25vw",
+            height: "2.5vh",
+            minWidth: "300px",
+          }}
           type="text"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />
         <div>{fail ? <div id="fail">try again</div> : <div></div>}</div>
         <Button
-          style={{ height: "40px" }}
+          style={{ height: "4vh", fontSize: "1.3vh" }}
           color="secondary"
           variant="contained"
           type="submit"
@@ -151,37 +155,51 @@ const App = () => {
         >
           Analysis
         </Button>
-        <div id="body">
-          <div id="value">
-            <div>Song : {track.name}</div>
-            <div>Artist : {artist.name}</div>
-            <div>Artist pop : {artist.pop}</div>
-            <div>energy : {track.energy}</div>
-            <div>valence : {track.valence}</div>
-            <div>duration_ks : {track.duration_ks}</div>
-            <div>track pop : {track.pop}</div>
+        <div id="value">
+          <div>
+            Song : <span id="value-get">{track.name}</span>
           </div>
+          <div>
+            Artist : <span id="value-get">{artist.name}</span>
+          </div>
+          <div>
+            Artist pop : <span id="value-get">{artist.pop}</span>
+          </div>
+          <div>
+            energy : <span id="value-get">{track.energy}</span>
+          </div>
+          <div>
+            valence : <span id="value-get">{track.valence}</span>
+          </div>
+          <div>
+            duration_ks : <span id="value-get">{track.duration_ks}</span>
+          </div>
+          <div>
+            track pop : <span id="value-get">{track.pop}</span>
+          </div>
+        </div>
 
-          <div
-            style={{
-              width: 180,
-              height: 180,
+        <div
+          style={{
+            width: "15vw",
+            minWidth: "160px",
+            height: "15vw",
+            minHeight: "160px",
+          }}
+        >
+          <CircularProgressbar
+            styles={{
+              path: {
+                stroke: "#ff0050",
+              },
+              text: {
+                fill: "#ff0050",
+                fontSize: "16px",
+              },
             }}
-          >
-            <CircularProgressbar
-              styles={{
-                path: {
-                  stroke: "#ff0050",
-                },
-                text: {
-                  fill: "#ff0050",
-                  fontSize: "16px",
-                },
-              }}
-              value={track.pop}
-              text={`${track.pop}%`}
-            />
-          </div>
+            value={track.pop}
+            text={`${track.pop}%`}
+          />
         </div>
       </div>
     </div>

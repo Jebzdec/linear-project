@@ -14,14 +14,16 @@
 }
 
 .content {
+  margin-left: auto;
+  margin-right: calc(22vw - 50px);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(4px + 2vmin);
-  color: white;
-  gap: 7vh;
+  font-size: calc(2.2px + 2vh);
+  color: rgb(21, 201, 251);
+  gap: 2vh;
 }
 
 .App-link {
@@ -29,16 +31,20 @@
 }
 
 #value {
-  width: 500px;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-#body {
-  left: 10;
   display: flex;
-  gap: 2px;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 35vw;
+  min-width: 300px;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
+
+#value-get {
+  color: #ff0050;
+}
+
 #success {
   color: rgb(7, 255, 7);
 }

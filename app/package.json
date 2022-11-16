@@ -28,13 +28,14 @@
     "spotify-web-api-js": "^1.5.2",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://jebzdec.github.io/linear-project/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI='' npm run build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node server",
-    "dev": "run-p server start"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +60,7 @@
     "@babel/preset-react": "^7.18.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "gh-pages": "^4.0.0",
     "npm-run-all": "^4.1.5"
   }
 }
