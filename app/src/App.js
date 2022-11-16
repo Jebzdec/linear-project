@@ -11,7 +11,9 @@ const App = () => {
   const [analysis, setIsAnalysis] = useState(false)
   const getToken = async () => {
     await axios
-      .get("http://localhost:5000/token", { crossdomain: true })
+      .get("https://linear-spotify-api.herokuapp.com/token", {
+        crossdomain: true,
+      })
       .then((response) => {
         setToken(response.data)
         spotifyApi.setAccessToken(response.data)
