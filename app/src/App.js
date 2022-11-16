@@ -166,16 +166,16 @@ const App = () => {
             Artist pop : <span id="value-get">{artist.pop}</span>
           </div>
           <div>
-            energy : <span id="value-get">{track.energy}</span>
+            Energy : <span id="value-get">{track.energy}</span>
           </div>
           <div>
-            valence : <span id="value-get">{track.valence}</span>
+            Valence : <span id="value-get">{track.valence}</span>
           </div>
           <div>
-            duration_ks : <span id="value-get">{track.duration_ks}</span>
+            Duration (ks) : <span id="value-get">{track.duration_ks}</span>
           </div>
           <div>
-            track pop : <span id="value-get">{track.pop}</span>
+            Track pop : <span id="value-get">{track.pop}</span>
           </div>
         </div>
 
