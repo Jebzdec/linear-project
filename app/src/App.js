@@ -111,11 +111,11 @@ const App = () => {
       setTrack((prev) => ({
         ...prev,
         pop: (
-          26.747 +
-          0.655 * artist.pop -
-          8.746 * track.energy +
-          4.476 * track.valence -
-          1.27 * track.duration_ks
+          25.624 +
+          0.726 * artist.pop -
+          11.499 * track.energy +
+          0.605 * track.valence -
+          13.148 * track.duration_ks
         ).toFixed(2),
       }))
     }
