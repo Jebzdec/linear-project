@@ -11,8 +11,8 @@ app.get("/token", function (req, resp) {
   resp.header("Access-Control-Allow-Origin", "*")
   resp.header("Access-Control-Allow-Headers", "X-Requested-With")
 
-  var client_id = "4857ae04711841ba9f7e9558fca98d99"
-  var client_secret = "9ef5eca8902949898f6694d4a27a601a"
+  var client_id = process.env.ID
+  var client_secret = process.env.SECRET
 
   var refresh_token = req.query.refresh_token
   var authOptions = {
